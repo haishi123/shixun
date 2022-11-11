@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>无标题文档</title>
+    <link rel="stylesheet" href="./css/manage.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <video id="v1" autoplay loop muted>
+      <source src="./video/bgvd.mp4" type="video/mp4" />
+    </video>
+    <link rel="stylesheet" href="./css/shi.css" />
+    <div class="app">
+      <div class="header">
+        <h1>学生学籍管理系统</h1>
+      </div>
+      <div class="container">
+        <div class="left">
+          <h2>学生管理菜单</h2>
+          <ul>
+            <li><a href="Student.html">学籍信息表</a></li>
+            <li><a href="Course.html">课程信息表</a></li>
+            <li><a href="Class.html">班级信息表</a></li>
+            <li><a href="Major.html">专业信息表</a></li>
+            <li>= <a href="Department.html">系部信息表</a></li>
+            <li>= <a href="Grade.html">系部信息表</a></li>
+            <li>= <a href="user.html">系部信息表</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 右边展示框 -->
+      <div class="rigtt_nav">
+        <div class="first right_a"></div>
+        <div class="first_b right_a"></div>
+        <div class="first_c right_a"></div>
+        <div class="first_d right_a"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  $(function () {
+    $("ul>li>a").click(function (e) {
+      //			alert(e.target.text);
+      $("ol").hide();
+      $(this).siblings("ol").toggle();
+    });
+
+    $(".left_a .form_k").click(function () {
+      //得到当前li的索引号
+      var index = $(this).index();
+      //右侧盒子相应显示
+      $(".rigtt_nav .right_a").eq(index).show();
+      //其余隐藏
+      $(".rigtt_nav .right_a").eq(index).siblings().hide();
+    });
+  });
+</script>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班级信息表</title>
+    <link rel="stylesheet" href="./css/Student.css">
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+</head>
+<body >
+    <video id="v1" autoplay loop muted>
+        <source src="./video/bgvd.mp4" type="video/mp4" />
+      </video>
+      <link rel="stylesheet" href="./css/shi.css" />
+    <div class="nav_one">
+        <div class="message">
+			<div style="font-size: 60px;">
+                班级信息表
+            </div>
+            <div class="but">
+                <button>点击增加</button>
+            </div>
+            <div class="but">
+                <button><a href="./index1.html">返回主页</a></button>
+            </div>
+            <div class="moren">
+                <ul id="lyq">
+                    <li id="xia">
+                        <div style="width: 140px;" class="lixing">序号</div>
+                        <div  style="width: 140px;" class="lixing">班级编号</div>
+                        <div  style="width: 140px;" class="lixing">班级号</div>
+                        <div  style="width: 140px;" class="lixing">专业编号</div>
+                        <div  style="width: 140px;" class="lixing">系部编号</div>
+                        <div  style="width: 140px;" class="lixing">人数</div>
+                    </li>
+                    <li id="xia">
+                        <div style="width: 140px;" class="lixing">1</div>
+                        <div  style="width: 140px;" class="lixing">01</div>
+                        <div  style="width: 140px;" class="lixing">001</div>
+                        <div  style="width: 140px;" class="lixing">001</div>
+                        <div  style="width: 140px;" class="lixing">001</div>
+                        <div  style="width: 140px;" class="lixing">6</div>
+                    </li>
+                    <li id="xia">
+                        <div style="width: 140px;" class="lixing">2</div>
+                        <div  style="width: 140px;" class="lixing">002</div>
+                        <div  style="width: 140px;" class="lixing">002</div>
+                        <div  style="width: 140px;" class="lixing">002</div>
+                        <div  style="width: 140px;" class="lixing">002</div>
+                        <div  style="width: 140px;" class="lixing">19</div>
+                    </li>
+                    <li id="xia">
+                        <div style="width: 140px;" class="lixing">4</div>
+                        <div  style="width: 140px;" class="lixing">003</div>
+                        <div  style="width: 140px;" class="lixing">003</div>
+                        <div  style="width: 140px;" class="lixing">003</div>
+                        <div  style="width: 140px;" class="lixing">003</div>
+                        <div  style="width: 140px;" class="lixing">7</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="send">
+        <div class="send_taxt lxgyy">
+            序号:<input id="tati" type="text" class="input_a">
+        </div>
+        <div class="content lxgyy">
+            班级编号:<input id="cont" type="text" class="input_a">
+            <!-- <textarea id="cont" cols="10" rows="10" value=""></textarea> -->
+        </div>
+        <div class="content_a lxgyy">
+            班级号:<input id="banji" type="text" class="input_a">
+            <!-- <textarea id="cont" cols="10" rows="10" value=""></textarea> -->
+        </div>
+        <div class="content_b lxgyy">
+            专业编号:<input id="banji_a" type="text" class="input_a">
+            <!-- <textarea id="cont" cols="10" rows="10" value=""></textarea> -->
+        </div>
+        <div class="content_c lxgyy">
+            系部编号:<input id="banji_b" type="text" class="input_a">
+            <!-- <textarea id="cont" cols="10" rows="10" value=""></textarea> -->
+        </div>  
+        <div class="content_c lxgyy">
+            人数:<input id="banji_c" type="text" class="input_a">
+            <!-- <textarea id="cont" cols="10" rows="10" value=""></textarea> -->
+        </div> 
+        <div class="but_two">
+            <button class="sure">确定</button>
+            <button class="Cancel">取消</button>
+        </div>
+    </div>
+    </div>
+</body>
+<!-- <script src="./jquery/jquery.min.js"></script> -->
+<script src="./jquery/jquery.min.js"></script>
+<script src="./bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+<script src="./js/gateway.js"></script>
+
+<script>
+
+$('.sure').click(function () {
+    $('.send').hide();
+    var tati = $("#tati").val()
+    var cont = $("#cont").val()
+    var banji = $("#banji").val()
+    var banji_a = $("#banji_a").val()
+    var banji_b = $("#banji_b").val()
+    var banji_c = $("#banji_c").val()
+
+   
+    // var trin = $("<li id='ctr" + tati + "'><div id='title'>" + tati + "</div><p id='content'>" + cont + "</p><button id='shanchu'>删除</button></li>");
+    var trin = $("<li id='ctr'> <div id='title'>" + tati + "</div> <div id='content'>" + cont + "</div> <div id='content_a'>" + banji + "</div>  <div id='content_b'>"+banji_a +"</div><div id='content_c'>"+banji_b +"</div><div id='content_d'>"+banji_c +"</div><button id='shanchu'>删除</button></li>");
+    if (tati != "" && cont != "") {
+        $("#xia").after(trin);
+    }
+    console.log($('#title').text());
+    console.log($('#content').text());
+    console.log($('#content_a').text());
+    console.log($('#content_c').text());
+
+    $('#shanchu').click(function () {
+        $(this).parent().remove();
+    })
+    $("#tati").val('')
+    $("#cont").val('')
+    $("#banji").val('')
+    $("#banji_a").val('')
+    $("#banji_b").val('')
+    $("#banji_c").val('')
+  
+
+    
+})
+
+
+$('.but button').click(function () {
+    $('.send').show();
+})
+
+$('.but_two .Cancel').click(function () {
+    $('.send').hide();
+})
+
+
+
+</script>
+
+</html>

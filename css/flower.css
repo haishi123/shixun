@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #ededed;
+	font-family: "宋体";
+	font-size: 16px;
+	color: #a5a5a5;
+}
+
+.header {
+	width: 980px;
+	margin: 0 auto 7px;
+	height: 86px;
+	line-height: 86px;
+	text-align:center;
+	font-family: "微软雅黑";
+	color: #a5a5a5;
+}
+
+.header h1 {
+	font-weight: normal;
+}
+
+.header strong {
+	font-weight: normal;
+	font-size: 30px;
+}
+
+.header em {
+	font-style: normal;
+	font-size: 14px;
+}
+
+
+.category {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.category h2 {
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #a5a5a5;
+	height: 42px;
+	line-height: 42px;
+}
+
+.category p {
+	line-height: 30px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.bestseller {
+	width: 602px;
+	margin: 0 auto;
+}
+
+.bestseller .description {
+	line-height: 30px;
+	text-indent: 2em;
+}
+
+.bestseller .description em {
+	font-style: normal;
+	text-decoration: underline;
+}
+
+.service {
+	width: 602px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.owner {
+	width: 602px;
+	margin: 0 auto;
+}
+
+.owner p {
+	text-indent: 2em;
+}
+
+.owner h3 {
+	height: 30px;
+	line-height: 30px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	font-weight: normal;
+	text-indent: 2em;
+}
+
+.owner p {
+	font-style: italic;
+	line-height: 26px;
+	font-size: 14px;
+}
+

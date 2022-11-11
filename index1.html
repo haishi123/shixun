@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>李新国</title>
+	<link rel="stylesheet" type="text/css" href="css/style.main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/showpic.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/music_disc.css"/>
+	<link rel="stylesheet" type="text/css" href="css/clock.css"/>
+	
+
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/timer.js"></script>
+	<script type="text/javascript" src="js/musicPlayer.js"></script>
+</head>
+<body bgcolor="lightgray">
+	
+	<!--背景-->
+	<div id="background">
+		<!--背景视频-->
+		<video id="bgvideo" playsinline autoplay loop>
+			<source src="video/bgvd.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	
+	<!--导航栏-->
+	<div id="navbg">
+	</div>
+	<div class="nav-part">
+		<ul id="head">
+			<li id="nav-icon"><img id="nav-logo" src="img/logo.png"></li>
+			<li><span><a href="Student.html">O 学籍信息表</a></span></li>
+			<li><span><a href="Class.html">O 班级信息表</a></span></li>
+			<li><span><a href="Course.html">O 课程信息表</a></span></li>
+			<li><span><a href="Major.html">O 专业信息表</a></span></li>
+			<li><span><a href="Department.html">O 系部信息表</a></span></li>
+			<li><span><a href="Grade.html">O 学生成绩表</a></span></li>
+			<li><span><a href="user.html">O 账户信息表</a></span></li>
+			</li>
+		</ul>	
+	</div>
+	
+	
+	<!--==========黑胶碟片旋转=========-->
+	<div id="songstatus">
+	    <div id="songstatus_pic" onclick="control(songNum)">
+	        <img src="img/music_disc.png" id="status_pic"><!--黑胶唱片-->
+	        <img src="img/discpointer.png" id="discpointer_pic"><!--指针-->
+	    </div>
+		<div id="songslist">
+			<li id="songName1" style="margin-top: 20px;">
+				<span onclick="start(1)">I'm in love</span>
+				<audio src="music/I'm%20in%20love.mp3" preload loop id="music1" class="music"></audio>
+			</li>
+			<li id="songName2">
+				<span onclick="start(2)">千与千寻</span>
+				<audio src="music/千与千寻.mp3" preload loop id="music2" class="music"></audio>
+			</li>
+			<li id="songName3">
+				<span onclick="start(3)">哪里都是你</span>
+				<audio src="music/哪里都是你.mp3" preload loop id="music3" class="music"></audio>
+			</li>
+			<div id="playStatus">
+				<img src="img/songCover0.png" id="songCover">
+			</div>
+		</div>
+	</div>
+	
+	<!--Top按钮-->
+	<div id="totop">
+		<div id="totopline"></div>
+		<div id="tri">
+			<img id="bigtri" src="img/triangle.png" />
+			<img id="bigtri-0" src="img/triangle0.png" />
+		</div>
+	</div>
+	
+	
+	
+	<!--中心标题-->
+	<div id="cttitle"><img id="cttitleimg" src="img/cttitl.png" /></div>
+	
+	<!--正文-->
+	<div id="context">
+		<div id="firstp">
+			<!--下一个按钮-->
+			<div class="next-sign">
+				<img id="next-tri" src="img/triangle.png">
+				<div id="next-line"></div>
+			</div>
+			
+			<!--映像-->
+			<!--标题-->
+			<div class="Title">
+				<div class="title_1"><span>映像</span></div>
+				<div class="title_2"><span>PHOTO</span></div>
+				<div class="title_3"><span>昨天，今天，明天</span></div>
+			</div>
+			<!--时间表-->
+			<div id="Clock">
+				<img id="clock_" src="img/clock.png" >
+				<img id="clock_hour" src="img/clock_hour.png" >
+				<img id="clock_minute" src="img/clock_minute.png" >
+				<img id="clock_second" src="img/clock_second.png" >
+			</div>
+			<div id="timer">
+				<div id="time_year">2022年1月1日</div>
+				<div id="time_clock">0时0分0秒</div>
+				<div id="time_weekday">周五</div>
+			</div>
+			
+			
+			<!--图1-->
+			<div class="showpic" id="showpic-1">
+				<a href="day_1.html"><img class="day" src="img/day1.jpg" /></a>
+			</div>
+			<a href="day_1.html">
+				<div class="pictitleR" id="pictit-1">
+					<span>今日印象/2022.10.21</span><br>
+					<span>10月21日</span><br>
+					<div class="pictitle-0" id="pictit-1-1">
+					</div>
+				</div>
+			</a>
+			
+			<!--图2-->
+			<div class="showpic" id="showpic-2">
+				<a href="day_2.html"><img class="day" src="img/day2.jpg" /></a>
+			</div>
+			<a href="day_2.html">
+				<div class="pictitleL" id="pictit-2">
+					<span>今日印象/2012.10.21</span><br>
+					<span>10月21日</span><br>
+					<div class="pictitle-0" id="pictit-2-1">
+					</div>
+				</div>
+			</a>
+			
+			<!--图3-->
+			<div class="showpic" id="showpic-3">
+				<a href="day_3.html"><img class="day" src="img/day3.jpg" /></a>
+			</div>
+			<a href="day_3.html">
+				<div class="pictitleL" id="pictit-3">
+					<span>今日印象/2012.10.21</span><br>
+					<span>10月21日</span><br>
+					<div class="pictitle-0" id="pictit-3-1">
+					</div>
+				</div>
+			</a>
+		</div>	
+		<!--随笔-->
+		<div id="secondp">
+			<div id="line"></div>
+			<div id="pg_title">
+				<div class="next-sign">
+					<img id="next-tri" src="img/triangle.png">
+					<div id="next-line"></div>
+				</div>
+				
+				<!--映像-->
+				<!--标题-->
+				<div class="Title">
+					<div class="title_1"><span>随笔</span></div>
+					<div class="title_2"><span>WRITING</span></div>
+					<div class="title_3"><span>今昔，今夕，今惜</span></div>
+				</div>
+			</div>
+			
+			<!--短文-->
+			<div class="Phrases" id="Phrases_1">
+				<div class="phrase">
+					<span>隐约雷鸣，阴霾天空，但盼风雨来，能留你在此。</span>
+				</div>
+				<div class="phrase">
+					<span>隐约雷鸣，阴霾天空，即使天无雨，我亦留此地。</span>
+				</div>
+				<div class="phrase_title">
+					<span>-《万叶集》雷神短歌</span>
+				</div>
+			</div>	
+			</a>
+
+			<div class="Phrases" id="Phrases_2">
+				<div class="phrase">
+					<span>若言相思兮，犹如身死，</span>
+				</div>
+				<div class="phrase">
+					<span>吾死而反生兮，何止千次。</span>
+				</div>
+				<div class="phrase_title">
+					<span>-《万叶集》</span>
+				</div>
+			</div>
+
+			<div class="Phrases" id="Phrases_3">
+				<div class="phrase">
+					<span>盛年不再，倏忽此生；</span>
+				</div>
+				<div class="phrase">
+					<span>京城奈良，不见而终。</span>
+				</div>
+				<div class="phrase_title">
+					<span>-《万叶集》</span>
+				</div>
+			</div>
+
+
+			<div class="Phrases" id="Phrases_4">
+				<div class="phrase">
+					<span>缁衣之宜兮，敝予又改为兮。适子之馆兮。还予授子之粲兮。</span>
+				</div>
+				<div class="phrase">
+					<span>缁衣之好兮，敝予又改造兮。适子之馆兮，还予授子之粲兮。</span>
+				</div>
+				<div class="phrase">
+					<span>缁衣之席兮，敝予又改作兮。适子之馆兮，还予授子之粲兮。</span>
+				</div>
+				<div class="phrase_title">
+					<span>-《诗经》</span>
+				</div>
+			</div>
+			
+
+			<div class="Phrases" id="Phrases_5">
+				<div class="phrase">
+					<span>隐恋避人眼；</span>
+				</div>
+				<div class="phrase">
+					<span>莫如瞿麦开出花，日日相见。</span>
+				</div>
+				<div class="phrase_title">
+					<span>-《万叶集》</span>
+				</div>
+			</div>
+		</div>
+		
+		<!--流年-->
+		<div id="thirdp">
+			<div id="line"></div>
+			<div id="pg_title">
+				<!--下一个按钮-->
+				<div class="next-sign">
+					<img id="next-tri" src="img/triangle.png">
+					<div id="next-line"></div>
+				</div>
+
+				<!--映像-->
+				<!--标题-->
+				<div class="Title">
+					<div class="title_1"><span>流年</span></div>
+					<div class="title_2"><span>TIME</span></div>
+					<div class="title_3"><span>时间，人，地点</span></div>
+				</div>
+			</div>
+
+
+
+			<!--实现图片轮播效果-->
+			<div id="Upper">
+				<div class="carousel">
+					<div class="imgBox">
+						<ul>
+							<li class="list1"><img src="img/carousel1.jpg" style="width:730px;height:336px;"></li>
+							<li class="list2"><img src="img/carousel2.jpg" style="width:730px;height:336px;"></li>
+							<li class="list3"><img src="img/carousel3.jpg" style="width:730px;height:336px;"></li>
+							<li class="list4"><img src="img/carousel4.jpg" style="width:730px;height:336px;"></li>
+							<li class="list5"><img src="img/carousel5.jpg" style="width:730px;height:336px;"></li>
+							<li class="list6"><img src="img/carousel6.jpg" style="width:730px;height:336px;"></li>
+						</ul>
+					</div>
+						<div class="lineBar">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+			</div>
+
+		</div>
+		
+	</div>
+	
+	<!--底部-->
+	<div id="pgbottom">
+		<div id="botttitle">
+			<div class="vtcChar" id="botchar1">
+				/ 我的心里住着一碗汤 ，一盘炒饭 ， 
+			</div>
+			<div class="vtcChar" id="botchar2">
+				和一个赖床的午后 /
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+<script type="text/javascript">
+//totop按钮
+$("#bigtri").click(function(){//单击事件
+	$("html,body").animate({scrollTop:0},400);
+})
+
+$(window).scroll(function(){//窗体滚动条滚动事件
+	if($(window).scrollTop()<5){
+		$(".nav-part").fadeIn(300);
+	}else{
+		$(".nav-part").fadeOut(300);
+	}
+	if($(window).scrollTop()>400){
+		$("#totop").fadeIn(300);
+	}else{
+		$("#totop").fadeOut(300);
+	}
+})
+
+//轮播图
+var aLi = document.querySelectorAll(".imgBox li");
+var aSpan = document.querySelectorAll(".lineBar span");
+var oImgbox = document.querySelector(".imgBox");
+var aName = []; //存放元素的名字
+var index = 0;//初始状态下第几个按钮变色
+setColor();
+for(var item of aLi){//定义一个循环语句，将图片名字赋给aName
+	aName.push(item.classList[0]);
+}
+function nextPic() { //向下翻页
+	aName.unshift(aName[5]); //把数组最后一个值复制并插入到数组第一个位置
+	aName.pop();  //删除数组的最后一个元素
+	for (var i=0,len=aLi.length;i<len;i++){
+		//预存数组长度，减少循环语句的性能消耗
+		aLi[i].setAttribute("class",aName[i]);
+		//重新给每个元素设置新的名字
+	}
+	index++;
+	if(index>5)index=0;
+	setColor();
+}
+function nowPic(){
+	self.location.href="album.html"
+}
+function prePic() {
+	aName.push(aName[0]); //把数组第一个值复制并插入到数组最后一个位置
+	aName.shift();//删除第一个
+	for (var i=0,len=aLi.length;i<len;i++){
+		//预存数组长度，减少循环语句的性能消耗
+		aLi[i].setAttribute("class",aName[i]);
+		//重新给每个元素设置新的名字
+	}
+	index--;
+	if(index<0)index=5;
+	setColor();
+}
+function setColor() {
+	for(var item of aSpan){
+		item.style.backgroundColor="#ccc";
+	}
+	aSpan[index].style.backgroundColor = "#45c17c";
+}
+var eleList=["list1","list2","list3"];
+var eleAct=["prePic","nowPic","nextPic"];
+oImgbox.addEventListener("click",function (ev) {
+	var ele = ev.target.parentNode;//获取点中的li元素
+	var eleName=ele.classList[0];//获取li元素的名字
+	window[eleAct[eleList.indexOf(eleName)]]();//判断应该执行那个函数
+})
+
+setInterval("nextPic()",3000);//设置每隔5s执行一次nextPic函数
+</script>
+
+</html>

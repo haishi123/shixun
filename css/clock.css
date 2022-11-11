@@ -1,0 +1,35 @@
+#Clock{
+	width: 150px;
+	height: 150px;
+	left: 300px;
+	top: 150px;
+	position: relative;
+}
+#clock_{
+	width: 150px;
+	height: 150px;
+	left: 1px;
+	top: -150px;
+	position: relative;
+}
+#clock_hour{
+	width: 150px;
+	height: 150px;
+	left: 1px;
+	top: -303px;
+	position: relative;
+}
+#clock_minute{
+	width: 150px;
+	height: 150px;
+	left: 1px;
+	top: -456px;
+	position: relative;
+}
+#clock_second{
+	width: 150px;
+	height: 150px;
+	left: 1px;
+	top: -609px;
+	position: relative;
+}

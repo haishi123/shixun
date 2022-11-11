@@ -1,0 +1,83 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+ul,ol{
+	list-style: none;
+}
+.app{
+	width: 100%;
+	height: 100%;
+}
+.header{
+	width: 100%;
+	height: 60px;
+	background-color:#222;
+	color: #fff;
+	position: fixed;
+	
+}
+
+.left{
+	width: 250px;
+	height: 750px;
+	background-color: #333333;
+	float:left;
+	color: #fff;
+	box-sizing: border-box;
+	padding: 20px 0;
+}
+
+.main{
+	height: 100%;
+	background-color: white;
+	box-sizing: border-box;
+	padding: 20px;
+	margin-left: 300px;
+
+}
+.left h2{
+	margin-bottom:20px;
+}
+.left a{
+	color:#fff;
+	text-decoration: none;
+}
+.left ul{
+	padding-left: 20px;
+}
+.left ul>li{
+	line-height: 36px;
+	background: url("../img/tubiao.png") no-repeat left top;
+	background-size: 20px;
+	padding-left: 36px;
+}
+.left ul>li>ol{
+	display: none;
+}
+
+.left ul>li>ol>li>a{
+	color: #C8c8c8;
+}
+.left ul>li>ol>li>a:hover{
+	color:aqua;
+}
+
+
+
+/* 右展示框 */
+.rigtt_nav{
+
+	position: absolute;
+	right: 0;
+	top: 60px;
+	width: 1221px;
+	height: 680px;
+	border:1px solid black ;
+	display: none;
+}
+
